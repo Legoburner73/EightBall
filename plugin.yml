@@ -1,0 +1,16 @@
+name: eightball
+api: [1.9.0]
+version: 0.0.1
+load: POSTWORLD
+main: Legoburner73\eightball\Main
+
+commands:
+ 8ball:
+  description: Main 8ball command
+  alises: [magic8ball, magic8, magicball]
+  permission: 8ball.cmd
+  
+permissions:
+ 8ball.cmd:
+  description: "Allows user to use 8ball"
+  default: true
