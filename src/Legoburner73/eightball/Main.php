@@ -2,6 +2,10 @@
 
 namespace Legoburner73\eightball;
 
+/*
+* 8-Ball in pocketmine by Legoburner73
+*/
+
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
