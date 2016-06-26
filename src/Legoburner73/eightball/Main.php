@@ -15,6 +15,9 @@ use pocketmine\event\Listener;
 use pocketmine\Server;
 
 class Main extends PluginBase implements Listener {
+
+    private PREFIX = Colour::BLUE . "[" . Colour::GREEN . "8ball" . Colour::BLUE . "[" . Colour::RED;
+
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info(Colour::GREEN."[8ball] has been enabled!");
@@ -29,68 +32,68 @@ class Main extends PluginBase implements Listener {
             case "8ball":
                 $answers = mt_rand(1, 20);
                 if(!(isset($args[0]))) {
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."I can't reply to nothing! Please try again.");
+                    $sender->sendMessage($this->PREFIX . "I can't reply to nothing! Please try again.");
                 }else{
                 switch($answers) {
                     case 1:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Signs point to yes.");
+                    $sender->sendMessage($this->PREFIX . "Signs point to yes.");
                     break;
                     case 2:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Yes.");
+                    $sender->sendMessage($this->PREFIX . "Yes.");
                     break;
                     case 3:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Reply hazy, try again.");                      
+                    $sender->sendMessage($this->PREFIX . "Reply hazy, try again.");                      
                     break;
                     case 4:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Without a doubt");
+                    $sender->sendMessage($this->PREFIX . "Without a doubt");
                     break;
                     case 5:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."My sources say no");
+                    $sender->sendMessage($this->PREFIX . "My sources say no");
                     break;
                     case 6:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."As I see it, yes.");
+                    $sender->sendMessage($this->PREFIX . "As I see it, yes.");
                     break;
                     case 7:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."You may rely on it.");
+                    $sender->sendMessage($this->PREFIX . "You may rely on it.");
                     break;
                     case 8:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Concentrate and ask again.");
+                    $sender->sendMessage($this->PREFIX . "Concentrate and ask again.");
                     break;
                     case 9:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Outlook not so good.");
+                    $sender->sendMessage($this->PREFIX . "Outlook not so good.");
                     break;
                     case 10:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."It is decidedly so.");
+                    $sender->sendMessage($this->PREFIX . "It is decidedly so.");
                     break;
                     case 11:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Better not to tell you know.");
+                    $sender->sendMessage($this->PREFIX . "Better not to tell you know.");
                     break;
                     case 12:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Very doubtful.");
+                    $sender->sendMessage($this->PREFIX . "Very doubtful.");
                     break;
                     case 13:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Yes - definitely.");
+                    $sender->sendMessage($this->PREFIX . "Yes - definitely.");
                     break;
                     case 14:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."It is certain.");
+                    $sender->sendMessage($this->PREFIX . "It is certain.");
                     break;
                     case 15:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Cannot predict now.");
+                    $sender->sendMessage($this->PREFIX . "Cannot predict now.");
                     break;
                     case 16:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Most likely.");
+                    $sender->sendMessage($this->PREFIX . "Most likely.");
                     break;
                     case 17:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Ask again later.");
+                    $sender->sendMessage($this->PREFIX . "Ask again later.");
                     break;
                     case 18:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."My reply is no.");
+                    $sender->sendMessage($this->PREFIX . "My reply is no.");
                     break;
                     case 19:
-                        $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Outlook good.");
+                        $sender->sendMessage($this->PREFIX . "Outlook good.");
                     break;
                     case 20:
-                    $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Don't count on it.");
+                    $sender->sendMessage($this->PREFIX . "Don't count on it.");
                     break;
                     }
                 }
