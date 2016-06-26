@@ -31,46 +31,67 @@ class Main extends PluginBase implements Listener {
                 if(!(isset($args[0]))) {
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."I can't reply to nothing! Please try again.");
                 }else{
-                if($answers === 1) {
+                switch($answers) {
+                    case 1:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Signs point to yes.");
-                }elseif($answers === 2) {
+                    break;
+                    case 2:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Yes.");
-                }elseif($answers === 3) {
+                    break;
+                    case 3:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Reply hazy, try again.");                      
-                }elseif($answers === 4) {
+                    break;
+                    case 4:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Without a doubt");
-                }elseif($answers === 5) {
+                    break;
+                    case 5:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."My sources say no");
-                }elseif($answers === 6) {
+                    break;
+                    case 6:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."As I see it, yes.");
-                }elseif($answers === 7) {
+                    break;
+                    case 7:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."You may rely on it.");
-                }elseif($answers === 8) {
+                    break;
+                    case 8:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Concentrate and ask again.");
-                }elseif($answers === 9) {
+                    break;
+                    case 9:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Outlook not so good.");
-                }elseif($answers === 10) {
+                    break;
+                    case 10:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."It is decidedly so.");
-                }elseif($answers === 11) {
+                    break;
+                    case 11:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Better not to tell you know.");
-                }elseif($answers === 12) {
+                    break;
+                    case 12:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Very doubtful.");
-                }elseif($answers === 13) {
+                    break;
+                    case 13:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Yes - definitely.");
-                }elseif($answers === 14) {
+                    break;
+                    case 14:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."It is certain.");
-                }elseif($answers === 15) {
+                    break;
+                    case 15:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Cannot predict now.");
-                }elseif($answers === 16) {
+                    break;
+                    case 16:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Most likely.");
-                }elseif($answers === 17) {
+                    break;
+                    case 17:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Ask again later.");
-                }elseif($answers === 18) {
+                    break;
+                    case 18:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."My reply is no.");
-                }elseif($answers === 19) {
+                    break;
+                    case 19:
                         $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Outlook good.");
-                }elseif($answers === 20) {
+                    break;
+                    case 20:
                     $sender->sendMessage(Colour::BLUE."[".Colour::GREEN."8ball".Colour::BLUE."]".Colour::RED."Don't count on it.");
+                    break;
                     }
                 }
                 break;
