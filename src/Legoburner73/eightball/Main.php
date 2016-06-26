@@ -16,7 +16,7 @@ use pocketmine\Server;
 
 class Main extends PluginBase implements Listener {
 
-    private PREFIX = Colour::BLUE . "[" . Colour::GREEN . "8ball" . Colour::BLUE . "[" . Colour::RED;
+    private PREFIX = Colour::BLUE . "[" . Colour::GREEN . "8ball" . Colour::BLUE . "]" . Colour::RED;
 
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
